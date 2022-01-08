@@ -6,4 +6,5 @@ class AppIcons {
 
   static final String search = 'assets/icons/all/search_icon.svg';
   static final String addChat = 'assets/icons/all/add_chat_icon.svg';
+  static final String read = 'assets/icons/all/read_icon.svg';
 }

@@ -12,7 +12,7 @@ class CustomAppBar extends StatelessWidget with PreferredSizeWidget {
     return Container(
       alignment: Alignment.bottomCenter,
       height: preferredSize.height,
-      padding: EdgeInsets.only(top: MediaQuery.of(context).padding.top),
+      margin: EdgeInsets.only(top: MediaQuery.of(context).padding.top),
       child: Padding(
         padding: EdgeInsets.all(SizeUtil.wBlock * 12),
         child: Row(
@@ -39,5 +39,5 @@ class CustomAppBar extends StatelessWidget with PreferredSizeWidget {
   }
 
   @override
-  Size get preferredSize => Size.fromHeight(100.0);
+  Size get preferredSize => Size.fromHeight(60.0);
 }

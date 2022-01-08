@@ -1,4 +1,3 @@
-import 'package:car_store/ui/theme/app_colors.dart';
 import 'package:car_store/ui/theme/app_icons.dart';
 import 'package:car_store/ui/util/size_util.dart';
 import 'package:flutter/material.dart';
@@ -6,6 +5,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 import 'temp_data/data.dart';
 import 'widgets/chat_sort_tile.dart';
+import 'widgets/conversation_tile.dart';
 
 class ChatScreen extends StatelessWidget {
   const ChatScreen({Key? key}) : super(key: key);
@@ -44,39 +44,6 @@ class ChatScreen extends StatelessWidget {
             ),
           ),
         ],
-      ),
-    );
-  }
-}
-
-class ConversationTile extends StatelessWidget {
-  const ConversationTile({Key? key, required this.conversation}) : super(key: key);
-
-  final Conversation conversation;
-
-  @override
-  Widget build(BuildContext context) {
-    return ListTile(
-      leading: CircleAvatar(
-        radius: 24,
-        backgroundImage: NetworkImage(
-          conversation.image,
-        ),
-      ),
-      title: Text(
-        conversation.recieverName,
-        style: TextStyle(
-          color: AppColors.textPrimary,
-          fontWeight: FontWeight.w600,
-        ),
-      ),
-      subtitle: Text(
-        conversation.lastMessage,
-        maxLines: 1,
-        style: TextStyle(
-          color: AppColors.textSecondary,
-          overflow: TextOverflow.ellipsis,
-        ),
       ),
     );
   }
