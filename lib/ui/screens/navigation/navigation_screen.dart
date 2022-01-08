@@ -1,10 +1,10 @@
-import 'package:car_store/ui/screens/navigation/controller/navigation_controller.dart';
-import 'package:car_store/ui/screens/navigation/widgets/app_bar.dart';
-import 'package:car_store/ui/screens/navigation/widgets/bottom_navigation_item.dart';
-import 'package:car_store/ui/theme/app_colors.dart';
-import 'package:car_store/ui/theme/app_icons.dart';
+import 'package:car_store/ui/theme/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+
+import 'controller/navigation_controller.dart';
+import 'widgets/app_bar.dart';
+import 'widgets/bottom_navigation_item.dart';
 
 class NavigationScreen extends StatelessWidget {
   const NavigationScreen({Key? key}) : super(key: key);

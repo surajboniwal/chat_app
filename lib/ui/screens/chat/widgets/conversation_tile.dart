@@ -1,8 +1,8 @@
 import 'package:car_store/ui/screens/chat/temp_data/data.dart';
-import 'package:car_store/ui/theme/app_colors.dart';
-import 'package:car_store/ui/theme/app_icons.dart';
+import 'package:car_store/ui/theme/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:car_store/utils/extensions/extensions.dart';
 
 class ConversationTile extends StatelessWidget {
   const ConversationTile({Key? key, required this.conversation}) : super(key: key);
@@ -72,7 +72,7 @@ class ConversationTile extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
           Text(
-            '11:23 PM',
+            conversation.time.conversationTime,
             style: TextStyle(
               fontSize: 12.0,
             ),

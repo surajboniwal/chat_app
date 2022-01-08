@@ -1,5 +1,5 @@
-import 'package:car_store/ui/theme/app_icons.dart';
-import 'package:car_store/ui/util/size_util.dart';
+import 'package:car_store/ui/theme/theme.dart';
+import 'package:car_store/utils/helpers/helpers.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -22,12 +22,12 @@ class ChatScreen extends StatelessWidget {
       body: Column(
         children: [
           SizedBox(
-            height: SizeUtil.hBlock * 24,
+            height: SizeHelper.hBlock * 24,
             child: ListView.separated(
-              padding: EdgeInsets.symmetric(horizontal: SizeUtil.wBlock * 12),
+              padding: EdgeInsets.symmetric(horizontal: SizeHelper.wBlock * 12),
               itemCount: sorts.length,
               scrollDirection: Axis.horizontal,
-              separatorBuilder: (context, index) => SizedBox(width: SizeUtil.wBlock * 12),
+              separatorBuilder: (context, index) => SizedBox(width: SizeHelper.wBlock * 12),
               itemBuilder: (context, index) => ChatSortTile(
                 label: sorts[index],
                 selected: index == 0,

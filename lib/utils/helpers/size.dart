@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class SizeUtil {
+class SizeHelper {
   static MediaQueryData data = MediaQueryData.fromWindow(WidgetsBinding.instance!.window);
   static Size size = data.size;
 

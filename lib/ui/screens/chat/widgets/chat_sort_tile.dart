@@ -1,5 +1,5 @@
-import 'package:car_store/ui/theme/app_colors.dart';
-import 'package:car_store/ui/util/size_util.dart';
+import 'package:car_store/ui/theme/theme.dart';
+import 'package:car_store/utils/helpers/helpers.dart';
 import 'package:flutter/material.dart';
 
 class ChatSortTile extends StatelessWidget {
@@ -16,8 +16,8 @@ class ChatSortTile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: Container(
-        padding: EdgeInsets.symmetric(horizontal: SizeUtil.wBlock * 8),
-        height: SizeUtil.hBlock * 12,
+        padding: EdgeInsets.symmetric(horizontal: SizeHelper.wBlock * 8),
+        height: SizeHelper.hBlock * 12,
         decoration: BoxDecoration(
           color: selected ? AppColors.primary : AppColors.background,
           borderRadius: BorderRadius.circular(4.0),

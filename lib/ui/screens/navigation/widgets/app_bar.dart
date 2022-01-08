@@ -1,6 +1,5 @@
-import 'package:car_store/ui/theme/app_colors.dart';
-import 'package:car_store/ui/theme/app_icons.dart';
-import 'package:car_store/ui/util/size_util.dart';
+import 'package:car_store/ui/theme/theme.dart';
+import 'package:car_store/utils/helpers/helpers.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -14,7 +13,7 @@ class CustomAppBar extends StatelessWidget with PreferredSizeWidget {
       height: preferredSize.height,
       margin: EdgeInsets.only(top: MediaQuery.of(context).padding.top),
       child: Padding(
-        padding: EdgeInsets.all(SizeUtil.wBlock * 12),
+        padding: EdgeInsets.all(SizeHelper.wBlock * 12),
         child: Row(
           children: [
             Text(
