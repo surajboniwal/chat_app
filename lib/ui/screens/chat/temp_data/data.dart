@@ -13,6 +13,7 @@ class Conversation {
   final String image;
   final int pendingMesageCount;
   final bool isOnline;
+  final String type;
 
   Conversation({
     required this.recieverName,
@@ -22,6 +23,7 @@ class Conversation {
     required this.image,
     required this.pendingMesageCount,
     required this.isOnline,
+    required this.type,
   });
 
   static List<Conversation> list = [
@@ -33,6 +35,7 @@ class Conversation {
       image: 'https://randomuser.me/api/portraits/men/52.jpg',
       pendingMesageCount: 0,
       isOnline: false,
+      type: 'Work',
     ),
     Conversation(
       recieverName: 'Krish Bhanushali',
@@ -42,6 +45,7 @@ class Conversation {
       image: 'https://randomuser.me/api/portraits/men/53.jpg',
       pendingMesageCount: 2,
       isOnline: true,
+      type: 'Personal',
     ),
     Conversation(
       recieverName: 'Rahul Chaudhary',
@@ -51,6 +55,7 @@ class Conversation {
       image: 'https://randomuser.me/api/portraits/men/54.jpg',
       pendingMesageCount: 1,
       isOnline: false,
+      type: 'Group',
     ),
   ];
 }
