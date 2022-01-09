@@ -40,7 +40,7 @@ class NavigationScreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 BottomNavigationItem(icon: AppIcons.chat, index: 0),
-                BottomNavigationItem(icon: AppIcons.clock, index: 1),
+                // BottomNavigationItem(icon: AppIcons.clock, index: 1),
                 BottomNavigationItem(icon: AppIcons.call, index: 2),
                 BottomNavigationItem(icon: AppIcons.profile, index: 3),
               ],

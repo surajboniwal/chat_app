@@ -33,6 +33,6 @@ extension DateTimeDay on DateTime {
 
 extension DateTimeTime on DateTime {
   String get time {
-    return '${this.hour}:${this.minute}';
+    return '${this.hour.toString().padLeft(2, '0')}:${this.minute.toString().padLeft(2, '0')}';
   }
 }

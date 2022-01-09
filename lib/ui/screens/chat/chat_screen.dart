@@ -18,6 +18,7 @@ class ChatScreen extends StatelessWidget {
     return Scaffold(
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
+        backgroundColor: AppColors.primary,
         child: SvgPicture.asset(
           AppIcons.addChat,
         ),
@@ -30,18 +31,24 @@ class ChatScreen extends StatelessWidget {
               builder: (context, ref, child) {
                 final List<String> types = ref.watch(ChatTypesController.provider);
                 final provider = ref.watch(ChatTypesController.provider.notifier);
-                return ListView.separated(
-                  padding: EdgeInsets.symmetric(horizontal: SizeHelper.wBlock * 12),
-                  itemCount: types.length,
-                  scrollDirection: Axis.horizontal,
-                  separatorBuilder: (context, index) => SizedBox(width: SizeHelper.wBlock * 12),
-                  itemBuilder: (context, index) => ChatSortTile(
-                    label: types[index],
-                    selected: types[index] == provider.selectedType,
-                    onTap: () {
-                      provider.changeType(types[index]);
-                    },
-                  ),
+                return Row(
+                  children: [
+                    Expanded(
+                      child: ListView.separated(
+                        padding: EdgeInsets.symmetric(horizontal: SizeHelper.wBlock * 12),
+                        itemCount: types.length,
+                        scrollDirection: Axis.horizontal,
+                        separatorBuilder: (context, index) => SizedBox(width: SizeHelper.wBlock * 12),
+                        itemBuilder: (context, index) => ChatSortTile(
+                          label: types[index],
+                          selected: types[index] == provider.selectedType,
+                          onTap: () {
+                            provider.changeType(types[index]);
+                          },
+                        ),
+                      ),
+                    ),
+                  ],
                 );
               },
             ),

@@ -27,6 +27,8 @@ flutter:
   assets:
     - assets/icons/all/
     - assets/icons/bottom_navigation/
+    - assets/icons/call_icons/
+    - assets/icons/profile_icons/
 
   fonts:
     - family: Jakarta

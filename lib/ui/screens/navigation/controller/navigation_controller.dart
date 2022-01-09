@@ -1,6 +1,4 @@
-import 'package:car_store/ui/screens/chat/chat_screen.dart';
-import 'package:car_store/ui/screens/profile/profile_screen.dart';
-import 'package:car_store/ui/screens/recent/recent_screen.dart';
+import 'package:car_store/ui/screens/screens.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -13,6 +11,25 @@ class NavigationController extends StateNotifier<int> {
 
   void changePage(int index) {
     state = index;
+  }
+
+  String get title {
+    switch (state) {
+      case 0:
+        return 'Recent chats';
+
+      case 1:
+        return 'Chat App';
+
+      case 2:
+        return 'Recent calls';
+
+      case 3:
+        return 'Settings';
+
+      default:
+        return 'Chat App';
+    }
   }
 
   Widget get screen {
