@@ -9,6 +9,8 @@ import 'widgets/bottom_navigation_item.dart';
 class NavigationScreen extends StatelessWidget {
   const NavigationScreen({Key? key}) : super(key: key);
 
+  static const String route = '/navigation';
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

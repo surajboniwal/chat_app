@@ -1,4 +1,6 @@
+import 'package:car_store/core/route_generator.dart';
 import 'package:car_store/ui/screens/navigation/navigation_screen.dart';
+import 'package:car_store/ui/screens/splash/splash.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -17,7 +19,8 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       theme: AppTheme.theme,
-      home: const NavigationScreen(),
+      onGenerateRoute: RouteGenerator.generateRoute,
+      initialRoute: SplashScreen.route,
     );
   }
 }
