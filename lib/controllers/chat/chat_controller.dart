@@ -1,4 +1,4 @@
-import 'package:car_store/ui/screens/chat/temp_data/data.dart';
+import 'package:car_store/ui/screens/chat_list/temp_data/data.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class ChatController extends StateNotifier<List<Conversation>> {

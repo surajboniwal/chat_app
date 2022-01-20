@@ -1,6 +1,5 @@
 import 'package:car_store/core/route_generator.dart';
-import 'package:car_store/ui/screens/navigation/navigation_screen.dart';
-import 'package:car_store/ui/screens/splash/splash.dart';
+import 'package:car_store/ui/screens/screens.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 

@@ -35,10 +35,10 @@ class NavigationController extends StateNotifier<int> {
   Widget get screen {
     switch (state) {
       case 0:
-        return ChatScreen();
+        return ChatListScreen();
 
       case 1:
-        return ChatScreen();
+        return Container();
 
       case 2:
         return RecentScreen();

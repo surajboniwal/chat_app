@@ -1,4 +1,5 @@
-import 'package:car_store/ui/screens/chat/temp_data/data.dart';
+import 'package:car_store/ui/screens/chat/chat_screen.dart';
+import 'package:car_store/ui/screens/chat_list/temp_data/data.dart';
 import 'package:car_store/ui/theme/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -12,6 +13,9 @@ class ConversationTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
+      onTap: () {
+        Navigator.of(context).pushNamed(ChatScreen.route);
+      },
       leading: Stack(
         alignment: Alignment.bottomRight,
         children: [
